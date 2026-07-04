@@ -1,18 +1,38 @@
-# Real-time Support & Notifications — ES/EN
+# OteroSupport
 
-## Español
+**EN**: Real-time Support & Notifications (FastAPI + WebSockets)  
+**ES**: Soporte y notificaciones en tiempo real (FastAPI + WebSockets)
 
-Soporte en tiempo real (tickets + mensajes) con WebSockets.
+## Live demo / Demo online
+- **Web**: https://realtime-support-fastapi.vercel.app
+- **API docs**: https://realtime-support-fastapi-api.onrender.com/docs
+- **API health**: https://realtime-support-fastapi-api.onrender.com/api/v1/health
 
-### Endpoints
-- `/api/v1/support/tickets` (GET/POST)
-- `/api/v1/support/messages` (GET/POST)
-- WebSocket: `/api/v1/support/ws/{ticket_id}`
-- IA opcional: respuestas sugeridas vía `/api/v1/ai/chat`
+## Stack
+- FastAPI
+- WebSockets
+- PostgreSQL
+- Docker
+- AI (Groq)
 
----
+## Local setup (Docker)
 
-## English
+`ash
+cp .env.example .env
+docker compose up --build
+`
 
-Real-time support system with WebSockets, tickets/messages, and optional AI suggested replies.
+## Credentials (demo)
 
+**EN**: Default demo admin is seeded from ADMIN_EMAIL / ADMIN_PASSWORD.  
+**ES**: El admin demo se crea desde ADMIN_EMAIL / ADMIN_PASSWORD.
+
+## Deploy
+
+**EN**:
+- Backend: Render (Blueprint via ender.yaml)
+- Frontend: Vercel (Root Directory: web)
+
+**ES**:
+- Backend: Render (Blueprint con ender.yaml)
+- Frontend: Vercel (Root Directory: web)
